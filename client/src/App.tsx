@@ -1,5 +1,7 @@
 import { useState } from 'react'
+import "bootstrap/dist/js/bootstrap.min.css"
 import { BrowserRouter, Routes, Route} from "react-router-dom";
+import {ChessGame} from "./Pages/ChessGame.tsx";
 
 import './App.css'
 import {LandingPage} from "./Pages/LandingPage.tsx";
@@ -10,10 +12,10 @@ function App() {
     <>
         <BrowserRouter>
             <Routes>
-                <Route path="/chess/:id" element={<LandingPage />} />
+                <Route path="/" element={<LandingPage />} />
+                <Route path="/chessGame" element={<ChessGame />} />
             </Routes>
         </BrowserRouter>
-      <button className="bg-red-200 ">Join here</button>
     </>
   )
 }
