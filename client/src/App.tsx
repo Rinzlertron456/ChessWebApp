@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import "bootstrap/dist/js/bootstrap.min.css"
+import "bootstrap/dist/css/bootstrap.min.css"
 import { BrowserRouter, Routes, Route} from "react-router-dom";
 import {ChessGame} from "./Pages/ChessGame.tsx";
 
