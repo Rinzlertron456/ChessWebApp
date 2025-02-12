@@ -7,15 +7,16 @@ import './App.css'
 import {LandingPage} from "./Pages/LandingPage.tsx";
 
 function App() {
-
   return (
     <>
+        <div className="min-h-screen bg-blue-600">
         <BrowserRouter>
             <Routes>
                 <Route path="/" element={<LandingPage />} />
                 <Route path="/chessGame" element={<ChessGame />} />
             </Routes>
         </BrowserRouter>
+        </div>
     </>
   )
 }

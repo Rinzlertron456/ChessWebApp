@@ -1,3 +1,10 @@
+import {ChessBoard} from "./ChessBoard.tsx";
+
 export const ChessGame = () =>{
-    return ( <div>Chess Game Page</div> )
+    return (
+        <>
+            <h1>Chess Game Page</h1>
+            <ChessBoard/>
+        </>
+    )
 }
