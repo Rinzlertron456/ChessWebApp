@@ -13,20 +13,19 @@ export const LandingPage = () => {
                 <div className="desc-container text-center position-relative justify-end mt-64 text-amber-50">
                     <h1 className="mb-5">Welcome to 3D Chess Game</h1>
                     <h2 className="mb-5">This is a multiplayer online chess game with a 3D environment.</h2>
-                    <div className="button-container flex gap-5 ml-56 w-75">
-                        <button className="btn" style={{border: "2px solid aliceblue", color: "aliceblue"}}>
-                            <FontAwesomeIcon className="mr-2" icon={faRobot}/>Play with AI
-                        </button>
+                    <div className="button-container flex gap-5 ml-40 w-75">
                         <div className="buttons">
-                            <button className="btn">
-                                <span></span>
-                                <p data-start="good luck!" data-text="start!" data-title="new game"></p>
+                            <button className="btn-ai">
+                                <span className="flex"><p style={{fontSize:"17px"}} data-start="good luck!" data-text="start!" data-title="Play
+                            with AI"></p></span>
                             </button>
                         </div>
-                        <button className="btn" style={{border: "2px solid aliceblue", color: "black"}}
-                                onClick={() => handleLetsPlay()}><FontAwesomeIcon className="mr-2" icon={faChessKing}/>Play
-                            with Friend
-                        </button>
+                        <div className="buttons">
+                            <button className="btn-frnd" onClick={()=>handleLetsPlay()}>
+                                <span className="flex"><p style={{fontSize:"14px"}} className="ml-2" data-start="good luck!" data-text="start!" data-title="Play
+                            with Friend "></p></span>
+                            </button>
+                        </div>
                     </div>
                 </div>
                 <div className="img-container">
