@@ -1,6 +1,7 @@
 import {useNavigate} from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faChessKing, faMicrochip, faRobot} from "@fortawesome/free-solid-svg-icons";
+import {Button} from "../Components/Button.tsx";
 export const LandingPage = () => {
     const navigate = useNavigate();
     const handleLetsPlay=() =>{
@@ -15,10 +16,8 @@ export const LandingPage = () => {
                     <h2 className="mb-5">This is a multiplayer online chess game with a 3D environment.</h2>
                     <div className="button-container flex gap-5 ml-40 w-75">
                         <div className="buttons">
-                            <button className="btn-ai">
-                                <span className="flex"><p style={{fontSize:"17px"}} data-start="good luck!" data-text="start!" data-title="Play
-                            with AI"></p></span>
-                            </button>
+                            <Button fontSize = "17px" player = "AI"/>
+                            <Button fontSize = "14px" player = "Friend"/>
                         </div>
                         <div className="buttons">
                             <button className="btn-frnd" onClick={()=>handleLetsPlay()}>
