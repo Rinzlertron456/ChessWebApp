@@ -11,19 +11,13 @@ export const LandingPage = () => {
     return (
         <>
             <div className="flex -mt-8 w-screen h-screen" style={{marginLeft:"-6.75rem", backgroundColor:"#8B4513", boxShadow:"0 0 10px rgba(0, 0, 0, 0.5)"}}>
-                <div className="desc-container text-center position-relative justify-end mt-64 text-amber-50">
+                <div className="desc-container text-center position-relative justify-end mt-48 text-amber-50">
                     <h1 className="mb-5">Welcome to 3D Chess Game</h1>
                     <h2 className="mb-5">This is a multiplayer online chess game with a 3D environment.</h2>
-                    <div className="button-container flex gap-5 ml-40 w-75">
+                    <div className="button-container flex gap-5 ml-64 w-75">
                         <div className="buttons">
                             <Button fontSize = "17px" player = "AI"/>
-                            <Button fontSize = "14px" player = "Friend"/>
-                        </div>
-                        <div className="buttons">
-                            <button className="btn-frnd" onClick={()=>handleLetsPlay()}>
-                                <span className="flex"><p style={{fontSize:"14px"}} className="ml-2" data-start="good luck!" data-text="start!" data-title="Play
-                            with Friend "></p></span>
-                            </button>
+                            <Button fontSize = "14px" player = "Friend" handleLetsPlay = {handleLetsPlay}/>
                         </div>
                     </div>
                 </div>
