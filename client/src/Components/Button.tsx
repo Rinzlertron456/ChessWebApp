@@ -1,7 +1,19 @@
-export const Button = ( { fontSize , player , handleLetsPlay }) => {
+export const Button = (
+    {
+        onClick ,
+        children,
+        className
+    }:{
+        onClick: ()=>void;
+        children: React.ReactNode;
+        className?: string;
+      } ) => {
     return(
-        <button className="btn-ai" onClick={()=>handleLetsPlay()}>
-            <span className="flex"><p style={{fontSize:`${fontSize}`}} data-start="good luck!" data-text="start!" data-title={`Play with ${player}`}></p></span>
+        <button
+            onClick={onClick}
+            className={`px-8 py-4 text-2xl bg-green-500 text-white font-bold rounded ${className}`}
+        >
+            {children}
         </button>
     )
 }

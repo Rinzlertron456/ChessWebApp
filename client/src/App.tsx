@@ -6,14 +6,16 @@ import './App.css'
 function App() {
   return (
     <>
+        <div className="min-h-screen bg-bgMain text-textMain">
         <BrowserRouter>
             <Routes>
                 <Route path="/" element={<LandingPage />} />
                 <Route path="/chessGame" element={<ChessGame />} />
             </Routes>
         </BrowserRouter>
-    </>
-  )
+        </div>
+        </>
+        )
 }
 
 export default App

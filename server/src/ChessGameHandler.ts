@@ -39,7 +39,7 @@ export class ChessGameHandler{
             if(message.type===MOVE_PIECE){
                 const game = this.ChessGames.find(game=> game.player1 === socket && game.player2 === socket);
                 if(game){
-                    game.movePiece(socket,message.move);
+                    game.movePiece(socket,message.payload.move);
                 }
             }
         })
