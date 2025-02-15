@@ -41,7 +41,11 @@ export const ChessBoard = ( { chess , board , socket , setBoard }: {
                     }}} key={j} className={` w-16 h-16 ${(i+j)%2===0? 'bg-green-500':'bg-white'}`}>
                         <div className="w-full justify-center flex h-full">
                             <div className="h-full justify-center flex flex-col">
-                                {square ? square.type : ""}
+                                {square ?  <img
+                                    className="w-12 h-12"
+                                    src={`/${square.color}${square.type}.png`}
+                                    alt={`${square.color === "b" ? "Black" : "White"} ${square.type}`}
+                                />:null}
                             </div>
                         </div>
                     </div>
